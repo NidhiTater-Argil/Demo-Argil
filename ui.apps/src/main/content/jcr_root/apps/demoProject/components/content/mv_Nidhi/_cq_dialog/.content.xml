@@ -43,6 +43,7 @@
                                                         emptyText="Text"
                                                         fieldDescription="Enter random text"
                                                         fieldLabel="Enter Text"
+                                                        required="{Boolean}true"
                                                         name="./Text"/>
                                                     <pathBrowser
                                                         jcr:primaryType="nt:unstructured"
