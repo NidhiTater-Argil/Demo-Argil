@@ -22,8 +22,12 @@ public class DropDownHelperModel {
 
     @PostConstruct
     void activate(){
+
        dropdownValue =  dropdownService.getDisplayValue();
+       if(dropdownValue!=null)
         value = resource.getValueMap().get(dropdownValue,String.class);
+       else
+           value = "None";
 
     }
 
