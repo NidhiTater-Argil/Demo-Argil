@@ -1,0 +1,9 @@
+SV_Nidhi
+<sly data-sly-test="${properties.multi}">
+<sly data-sly-use.model = "com.demo.core.sling.models.Sling_Nidhi"/>
+</sly>
+
+<sly data-sly-list.child = "${model.Multi_Name}">
+    <h3>${child}</h3>
+</sly>
+
