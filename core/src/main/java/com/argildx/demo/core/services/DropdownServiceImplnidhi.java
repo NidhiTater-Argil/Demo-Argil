@@ -9,7 +9,7 @@ import org.osgi.service.metatype.annotations.Designate;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 import org.osgi.service.metatype.annotations.Option;
 
-@Component(immediate = true, service = DropdownService.class)
+@Component(immediate = true)
 @Designate(ocd=DropdownServiceImpl.DropdownConfig.class)
 
 public class DropdownServiceImpl implements DropdownService{
