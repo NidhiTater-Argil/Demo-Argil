@@ -28,9 +28,10 @@ import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.api.wrappers.ValueMapDecorator;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.OSGiService;
+import org.apache.sling.settings.SlingSettingsService;
 import org.osgi.service.component.annotations.Reference;
 
-@Model(adaptables = {Resource.class, SlingHttpServletRequest.class})
+@Model(adaptables = {Resource.class, SlingHttpServletRequest.class},resourceType = "/apps/demoProject/components/content/Comp1")
 public class ComponentReaderModel {
 
 
@@ -45,7 +46,6 @@ public class ComponentReaderModel {
   @PostConstruct
   public void init() {
     keyValueList = new ArrayList<>();
-
 //    KeyValue keyValue = new KeyValue("key1","value1");
 //    keyValueList.add(keyValue);
 //    keyValue = new KeyValue("key2","value2");
