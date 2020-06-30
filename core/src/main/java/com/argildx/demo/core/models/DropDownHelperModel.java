@@ -8,7 +8,7 @@ import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
-@Model(adaptables = Resource.class)
+@Model(adaptables = Resource.class, resourceType = "/apps/demoProject/components/content/PrintFieldAssignmentImpl ")
 
 public class DropDownHelperModel {
 
@@ -22,8 +22,12 @@ public class DropDownHelperModel {
 
     @PostConstruct
     void activate(){
+
        dropdownValue =  dropdownService.getDisplayValue();
+       if(dropdownValue!=null)
         value = resource.getValueMap().get(dropdownValue,String.class);
+       else
+           value = "None";
 
     }
 

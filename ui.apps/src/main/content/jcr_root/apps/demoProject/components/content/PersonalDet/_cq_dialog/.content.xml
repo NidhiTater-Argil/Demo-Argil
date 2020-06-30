@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="nt:unstructured"
     jcr:title="nidhi_Dialog"
     sling:resourceType="cq/gui/components/authoring/dialog">
@@ -36,33 +36,35 @@
                                                         fieldLabel="Title"
                                                         name="./Title"
                                                         required="{Boolean}true"
-                                                        value="mv_Nidhi"/>
-                                                    <Text
+                                                        value="PersonalDet"/>
+                                                    <FirstName
                                                         jcr:primaryType="nt:unstructured"
                                                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                         emptyText="Text"
-                                                        fieldDescription="Enter random text"
-                                                        fieldLabel="Enter Text"
-                                                        required="{Boolean}true"
-                                                        name="./Text"/>
-                                                    <pathBrowser
+                                                        fieldLabel="Enter First Name"
+                                                        name="./FirstName"
+                                                        required="{Boolean}true"/>
+                                                    <LastName
                                                         jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
-                                                        fieldDescription="Add Path"
-                                                        fieldLabel="Add Path "
-                                                        name="./Link"
-                                                        required="{Boolean}true"
-                                                        rootPath="/content"/>
-                                                    <image
-                                                        granite:class="cmp-teaser__editor-actionField"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        emptyText="Text"
+                                                        fieldLabel="Enter LastName"
+                                                        name="./LastName"
+                                                        required="{Boolean}true"/>
+                                                    <ContactNo
                                                         jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                        emptyText="Image path"
-                                                        fieldDescription="Add path for image"
-                                                        fieldLabel="Image"
-                                                        name="./Image"
-                                                        required="{Boolean}true"
-                                                        rootPath="/content"/>
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        emptyText="Text"
+                                                        fieldLabel="Enter Company Name"
+                                                        name="./ContactNo"
+                                                        required="{Boolean}true"/>
+                                                    <Address
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        emptyText="Text"
+                                                        fieldLabel="Enter City of Residence"
+                                                        name="./Address"
+                                                        required="{Boolean}true"/>
                                                 </items>
                                             </well>
                                         </items>

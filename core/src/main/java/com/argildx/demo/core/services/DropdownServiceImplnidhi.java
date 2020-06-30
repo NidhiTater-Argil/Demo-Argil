@@ -9,10 +9,9 @@ import org.osgi.service.metatype.annotations.Designate;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 import org.osgi.service.metatype.annotations.Option;
 
-@Component(immediate = true, service = DropdownService.class)
-@Designate(ocd=DropdownServiceImpl.DropdownConfig.class)
+@Component(immediate = true)
 
-public class DropdownServiceImpl implements DropdownService{
+public class DropdownServiceImplnidhi implements DropdownService{
 
     private String display_Value;
 
@@ -37,13 +36,13 @@ public class DropdownServiceImpl implements DropdownService{
     public @interface DropdownConfig
     {
         @AttributeDefinition(
-                name = "Display Value",
-                description = "select value to be shown",
-                options = {
+            name = "Display Value",
+            description = "select value to be shown",
+            options = {
                 @Option(label = "Image", value = "Image"),
                 @Option(label = "Link", value = "Link"),
                 @Option(label = "Text", value = "Text")
-        }
+            }
         )
         String display_Value() default "Link";
 

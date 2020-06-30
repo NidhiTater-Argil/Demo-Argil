@@ -1,0 +1,19 @@
+Student
+role = ${properties.Role}
+</br>
+FirstName :   ${properties.FirstName}
+</br>Last:Name:${properties.LastName}
+</br>
+EmailAdreess:  ${properties.Email}
+</br>Contact Number: ${properties.ContactNo}
+</br>
+Class: ${properties.Class}
+</br>Roll no: ${properties.RollNo}
+<sly data-sly-use.model="com.argildx.demo.core.models.SubjectModel"/>
+<label for="Subject">Subject</label><br>
+<select name="Subject" id="Subject">
+  <div data-sly-list.Key="${model.subjectHelperModel.subject}" data-sly-unwrap>
+    <option value="${model.subjectHelperModel.subject[Key]}">${Key}</option>
+  </div>
+</select>
+

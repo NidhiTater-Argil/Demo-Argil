@@ -1,4 +1,9 @@
 <h2 style="text-align:center;">mv_Nidhi</h2>
 <sly data-sly-use.model="com.argildx.demo.core.models.DropDownHelperModel"/>
 <sly data-sly-test.value="${model.getDropdownValue}"/>
-<div>${value}</div>
+<sly data-sly-test="${value}">
+    <div>${value}</div>
+</sly>
+<sly data-sly-test="${!value}">
+    <div> No value present in dialog</div>
+</sly>
